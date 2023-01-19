@@ -3,9 +3,10 @@ import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import '../styles/_app.scss';
+import { useMode } from '../../../hooks/useMode';
 
 function App() {
-  const [mode, setMode] = useState('light-mode')
+  const {mode, setMode} = useMode();
   const handleClick = () => {
     if(mode==='light-mode'){
       setMode('dark-mode')
